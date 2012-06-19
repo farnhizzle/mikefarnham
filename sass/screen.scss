@@ -1,0 +1,129 @@
+// imports
+@import "h5bp";
+@import "compass";
+
+// vars
+$bgColor: #3a3a3a;
+$mfColor: #ec008c;
+$selected-background-color: $mfColor;
+
+// h5bp includes
+@include h5bp-display; 
+@include h5bp-base;
+@include h5bp-selection;
+@include h5bp-links; 
+@include h5bp-typography; 
+@include h5bp-lists; 
+@include h5bp-embeds; 
+@include h5bp-figures; 
+@include h5bp-forms; 
+@include h5bp-tables;
+
+//optional h5bp includes
+@include h5bp-helpers;
+@include h5bp-chromeframe;
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+html, body { height:100%; overflow:hidden; width:100%; }
+
+body {
+  position:relative;
+  text-align:center;
+  
+  &#darkTheme {
+    background-color:darken($bgColor, 100%);
+    // background-image:image-url("nl_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: grayscale($mfColor);
+    @include box-shadow(transparentize(darken($bgColor, 100%), .1) 0 0 1000px inset);
+  }
+  
+  &#lightTheme {
+    background-color:lighten($bgColor, 60%);
+    color: lighten(grayscale($mfColor), 60%);
+    @include box-shadow(transparentize(lighten($bgColor, 20%), .1) 0 0 1000px inset);
+  }
+  
+  header {
+    position:relative;
+    z-index:2000;
+
+    #logo {
+      // background-color:transparent;
+      // height:50px;
+      // margin:10px 0;
+      // padding:5px 10px 5px 0;
+      position:fixed;
+        top:1em;
+        left:0;
+      z-index:2100;
+      @include clearfix;
+        
+      a {
+        // background-color:darken($bgColor, 10%);
+        display:block;
+        // line-height:50px;
+        // padding-right:.7em;
+        // padding-left:.7em;
+        position:relative;
+        text-decoration:none;
+        z-index:2200;
+        @include opacity(.5);
+        @include transition(all .5s);
+        
+        &:hover {
+          @include opacity(1);
+        }
+        
+        // @include box-shadow(transparentize(darken($bgColor, 100%), .15) 0 0 10px);
+      }
+    
+      // span {
+      //   border:darken($bgColor, 10%) 10px solid;
+      //   border-top-width:40px;
+      //   border-right-color:transparent;
+      //   border-bottom-color:transparent;
+      //   border-left-width:0px;
+      //   position:absolute;
+      //     top:5px;
+      //     right:0;
+      //   z-index:2300;
+      // }
+    }
+  }
+  
+  #canvas {
+    position:absolute;
+      top:50%;
+      left:50%;
+    overflow:hidden;
+    margin-top:-50%;
+    margin-left:-50%;
+    height:100%;
+    width:100%;
+    z-index:0;
+  }
+  
+  // #overlay {
+  //   background-color:transparent;
+  //   @include box-shadow(rgba(#000, 1) 0px 0px 1000px inset);
+  //   position:fixed;
+  //   overflow:hidden;
+  //   height:100%;
+  //   width:100%;
+  //   z-index:200;
+  // }
+}
+
+
+@include h5bp-media;
