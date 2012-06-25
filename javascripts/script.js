@@ -8,6 +8,23 @@ $(document).ready(function() {
       left: ".7em"
     }, 700);
     
+  $("#workLinks")
+    .css("left", "-200px")
+    .delay(250)
+    .animate({
+      left: "0"
+    }, 700);
+    
+  // $("#logo").hover(function() {
+  //   $(this).animate({
+  //     left: "+=1em"
+  //   }, 250);
+  // }, function() {
+  //   $(this).animate({
+  //     left: "-=1em"
+  //   }, 250)
+  // });
+    
 // flickr photo feed
 
                 $.getJSON("http://api.flickr.com/services/feeds/photoset.gne?set=72157630060194861&nsid=33007040@N02&lang=en-us&format=json&jsoncallback=?",

@@ -35,16 +35,27 @@ $selected-background-color: $mfColor;
 
 html, body { height:100%; overflow:hidden; width:100%; }
 
+// type
+h1, h2, h3, h4, h5, h6 {
+  font:{
+    style:italic;
+    weight:100;
+  }
+  color:grayscale($mfColor); 
+}
+
 body {
+  // font-weight:100;
   position:relative;
-  text-align:center;
+  // text-align:center;
   
   &#darkTheme {
-    background-color:darken($bgColor, 100%);
+    background-color:darken($bgColor, 5%);
     // background-image:image-url("nl_bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     color: grayscale($mfColor);
+    @include background-image(linear-gradient(darken($bgColor, 20%), $bgColor));
     @include box-shadow(transparentize(darken($bgColor, 100%), .1) 0 0 1000px inset);
   }
   
@@ -112,6 +123,39 @@ body {
     height:100%;
     width:100%;
     z-index:0;
+    
+    #workLinks {
+      position:absolute;
+        top:3em;
+        left:0;
+      z-index:2100;
+      
+      h1 {
+        font-size:1.125em; 
+        margin:1em 0 0 .8em; 
+      }
+      
+      ul{
+        margin:0;
+        padding:0;
+        @include no-bullets();
+
+        a, a:link, a:visited {
+          color:lighten($bgColor, 100%);
+          padding:.35em 1em;
+          // @include text-shadow(lighten($bgColor, 30%) 0 -1px 0);
+          text-decoration:none;
+          @include opacity(.5);
+          @include transition(all .5s);
+
+          &:hover, &:active {
+            background-color:$mfColor;
+            // @include text-shadow(lighten($bgColor, 30%) 0 -1px 0);
+            @include opacity(1);
+          }
+        }
+      }
+    }
   }
   
   // #overlay {
@@ -124,6 +168,5 @@ body {
   //   z-index:200;
   // }
 }
-
 
 @include h5bp-media;
