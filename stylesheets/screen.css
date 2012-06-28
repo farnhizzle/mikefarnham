@@ -390,7 +390,7 @@ td {
 /* line 36, ../sass/screen.scss */
 html, body {
   height: 100%;
-  overflow: hidden;
+  /*overflow:hidden; */
   width: 100%;
 }
 
@@ -405,7 +405,32 @@ h1, h2, h3, h4, h5, h6 {
 body {
   position: relative;
 }
-/* line 52, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
+body a, body a:link, body a:visited {
+  text-decoration: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 56, ../sass/screen.scss */
+body a:hover, body a:active, body a:link:hover, body a:link:active, body a:visited:hover, body a:visited:active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 61, ../sass/screen.scss */
+body .menu-link, body header nav a, body header nav a:link, body header nav a:visited, body #canvas #workLinks ul a, body #canvas #workLinks ul a:link, body #canvas #workLinks ul a:visited {
+  color: white;
+  padding: .35em 1em;
+}
+/* line 65, ../sass/screen.scss */
+body .menu-link:hover, body header nav a:hover, body header nav a:hover:link, body header nav a:hover:visited, body #canvas #workLinks ul a:hover, body #canvas #workLinks ul a:hover:link, body #canvas #workLinks ul a:hover:visited, body .menu-link:active, body header nav a:active, body header nav a:active:link, body header nav a:active:visited, body #canvas #workLinks ul a:active, body #canvas #workLinks ul a:active:link, body #canvas #workLinks ul a:active:visited {
+  background-color: #ec008c;
+}
+/* line 68, ../sass/screen.scss */
 body#darkTheme {
   background-color: #2d2d2d;
   background-repeat: no-repeat;
@@ -421,7 +446,7 @@ body#darkTheme {
   -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0 1000px inset;
   box-shadow: rgba(0, 0, 0, 0.9) 0 0 1000px inset;
 }
-/* line 62, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 body#lightTheme {
   background-color: #d3d3d3;
   color: white;
@@ -429,40 +454,32 @@ body#lightTheme {
   -moz-box-shadow: rgba(109, 109, 109, 0.9) 0 0 1000px inset;
   box-shadow: rgba(109, 109, 109, 0.9) 0 0 1000px inset;
 }
-/* line 68, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body header {
   position: relative;
   z-index: 2000;
 }
-/* line 72, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 body header #logo {
   position: fixed;
   top: 1em;
-  left: 0;
+  left: .8em;
   z-index: 2100;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 83, ../sass/screen.scss */
-body header #logo a {
+/* line 99, ../sass/screen.scss */
+body header #logo a, body header #logo a:link, body header #logo a:visited {
   display: block;
-  position: relative;
-  text-decoration: none;
-  z-index: 2200;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
 }
-/* line 95, ../sass/screen.scss */
-body header #logo a:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+/* line 114, ../sass/screen.scss */
+body header nav {
+  position: fixed;
+  top: 1em;
+  right: 0;
+  z-index: 2000;
 }
-/* line 116, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 body #canvas {
   position: absolute;
   top: 50%;
@@ -474,19 +491,19 @@ body #canvas {
   width: 100%;
   z-index: 0;
 }
-/* line 127, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 body #canvas #workLinks {
   position: absolute;
   top: 3em;
   left: 0;
   z-index: 2100;
 }
-/* line 133, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 body #canvas #workLinks h1 {
   font-size: 1.125em;
   margin: 1em 0 0 .8em;
 }
-/* line 138, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 body #canvas #workLinks ul {
   margin: 0;
   padding: 0;
@@ -497,25 +514,6 @@ body #canvas #workLinks ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
-}
-/* line 143, ../sass/screen.scss */
-body #canvas #workLinks ul a, body #canvas #workLinks ul a:link, body #canvas #workLinks ul a:visited {
-  color: white;
-  padding: .35em 1em;
-  text-decoration: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-}
-/* line 151, ../sass/screen.scss */
-body #canvas #workLinks ul a:hover, body #canvas #workLinks ul a:active, body #canvas #workLinks ul a:link:hover, body #canvas #workLinks ul a:link:active, body #canvas #workLinks ul a:visited:hover, body #canvas #workLinks ul a:visited:active {
-  background-color: #ec008c;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 @media print {

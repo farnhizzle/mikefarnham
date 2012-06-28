@@ -8,7 +8,7 @@ $(document).ready(function() {
       left: ".7em"
     }, 700);
     
-  $("#workLinks")
+  $("#intro")
     .css("left", "-200px")
     .delay(250)
     .animate({
