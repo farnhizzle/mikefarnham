@@ -8,12 +8,32 @@ $(document).ready(function() {
       left: ".7em"
     }, 700);
     
-  $("#intro")
-    .css("left", "-200px")
+  var sideNavHeight = $(".sideNav").prev().outerHeight(true);
+  
+  $("#workLinks, #playLinks")
+    .css({
+      left: "-200px",
+      top: "3em"
+    })
     .delay(250)
     .animate({
       left: "0"
     }, 700);
+    
+  $("#playLinks").css('top', sideNavHeight + 50);
+    
+  // sideNav links animation
+  $("#workLinks a, #playLinks a").hover(function() {
+    $(this).animate({
+      fontSize: "+=.75em",
+      zIndex: "3000"
+    }, 100);
+  }, function() {
+    $(this).animate({
+      fontSize: "1em",
+      zIndex: "2100"
+    }, 100)
+  });
     
   // $("#logo").hover(function() {
   //   $(this).animate({

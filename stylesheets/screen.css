@@ -422,12 +422,12 @@ body a:hover, body a:active, body a:link:hover, body a:link:active, body a:visit
   opacity: 1;
 }
 /* line 61, ../sass/screen.scss */
-body .menu-link, body header nav a, body header nav a:link, body header nav a:visited, body #canvas #workLinks ul a, body #canvas #workLinks ul a:link, body #canvas #workLinks ul a:visited {
+body .menu-link, body header nav a, body header nav a:link, body header nav a:visited, body #canvas #workLinks ul a, body #canvas #workLinks ul a:link, body #canvas #workLinks ul a:visited, body #canvas #playLinks ul a, body #canvas #playLinks ul a:link, body #canvas #playLinks ul a:visited {
   color: white;
   padding: .35em 1em;
 }
 /* line 65, ../sass/screen.scss */
-body .menu-link:hover, body header nav a:hover, body header nav a:hover:link, body header nav a:hover:visited, body #canvas #workLinks ul a:hover, body #canvas #workLinks ul a:hover:link, body #canvas #workLinks ul a:hover:visited, body .menu-link:active, body header nav a:active, body header nav a:active:link, body header nav a:active:visited, body #canvas #workLinks ul a:active, body #canvas #workLinks ul a:active:link, body #canvas #workLinks ul a:active:visited {
+body .menu-link:hover, body header nav a:hover, body header nav a:hover:link, body header nav a:hover:visited, body #canvas #workLinks ul a:hover, body #canvas #workLinks ul a:hover:link, body #canvas #workLinks ul a:hover:visited, body #canvas #playLinks ul a:hover, body #canvas #playLinks ul a:hover:link, body #canvas #playLinks ul a:hover:visited, body .menu-link:active, body header nav a:active, body header nav a:active:link, body header nav a:active:visited, body #canvas #workLinks ul a:active, body #canvas #workLinks ul a:active:link, body #canvas #workLinks ul a:active:visited, body #canvas #playLinks ul a:active, body #canvas #playLinks ul a:active:link, body #canvas #playLinks ul a:active:visited {
   background-color: #ec008c;
 }
 /* line 68, ../sass/screen.scss */
@@ -469,17 +469,22 @@ body header #logo {
   *zoom: 1;
 }
 /* line 99, ../sass/screen.scss */
-body header #logo a, body header #logo a:link, body header #logo a:visited {
+body header #logo h1 {
+  margin: 0;
+  padding: 0;
+}
+/* line 101, ../sass/screen.scss */
+body header #logo h1 a, body header #logo h1 a:link, body header #logo h1 a:visited {
   display: block;
 }
-/* line 114, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 body header nav {
   position: fixed;
   top: 1em;
   right: 0;
   z-index: 2000;
 }
-/* line 127, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 body #canvas {
   position: absolute;
   top: 50%;
@@ -491,26 +496,25 @@ body #canvas {
   width: 100%;
   z-index: 0;
 }
-/* line 138, ../sass/screen.scss */
-body #canvas #workLinks {
+/* line 141, ../sass/screen.scss */
+body #canvas #workLinks, body #canvas #playLinks {
   position: absolute;
-  top: 3em;
   left: 0;
   z-index: 2100;
 }
-/* line 144, ../sass/screen.scss */
-body #canvas #workLinks h1 {
-  font-size: 1.125em;
-  margin: 1em 0 0 .8em;
+/* line 146, ../sass/screen.scss */
+body #canvas #workLinks h2, body #canvas #playLinks h2 {
+  margin: .8em 0 0 .6em;
+  padding: 0;
 }
-/* line 149, ../sass/screen.scss */
-body #canvas #workLinks ul {
+/* line 152, ../sass/screen.scss */
+body #canvas #workLinks ul, body #canvas #playLinks ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 /* line 11, ../../../.rvm/gems/ruby-1.9.3-p194@mikefarnham/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
-body #canvas #workLinks ul li {
+body #canvas #workLinks ul li, body #canvas #playLinks ul li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
